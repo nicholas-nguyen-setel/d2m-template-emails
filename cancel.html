@@ -21,12 +21,18 @@
         display: block;
       }
       .fuel-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 16px;
+        height: 20px;
         width: 32px;
+        padding: 2px 0px;
         margin-right: 4px;
+        position: relative;
+        display: inline-block;
+      }
+      .fuel-icon > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       .avatar {
@@ -63,14 +69,12 @@
       .txt-36 {
         font-size: 36px;
       }
-
       .we-400 {
         font-weight: 400;
       }
       .we-500 {
         font-weight: 500;
       }
-
       .line-16 {
         line-height: 16px;
       }
@@ -103,56 +107,18 @@
         margin-top: 16px;
         margin-bottom: 16px;
       }
-      .py-5 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      .py-22px {
-        padding-top: 22px;
-        padding-bottom: 22px;
-      }
       .pb-1 {
         padding-bottom: 4px;
-      }
-      .pt-3 {
-        padding-top: 12px;
       }
       .pt-4 {
         padding-top: 16px;
       }
-      .pt-5 {
-        padding-top: 20px;
-      }
-      .pb-4 {
-        padding-bottom: 16px;
-      }
       .pb-5 {
         padding-bottom: 20px;
-      }
-      .pb-9 {
-        padding-bottom: 36px;
-      }
-      .py-4 {
-        padding-top: 16px;
-        padding-bottom: 16px;
       }
       .pr-4 {
         padding-right: 16px;
       }
-
-      .flex {
-        display: flex;
-      }
-      .space-between {
-        justify-content: space-between;
-      }
-      .grow-1 {
-        flex-grow: 1;
-      }
-      .wrap {
-        flex-wrap: wrap;
-      }
-
       .w-69 {
         width: 69px;
       }
@@ -181,6 +147,45 @@
       .w-50 {
         width: 50%;
       }
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      tr {
+        width: 100%;
+      }
+      .order-table tr,
+      .total-table tr {
+        border-top: 1px solid #b4c3d3;
+      }
+
+      .order-table tr td {
+        padding: 20px 0px;
+        vertical-align: top;
+      }
+      .order-table tr > td:first-child {
+        width: 70px;
+      }
+      .text-right {
+        text-align: right;
+      }
+
+      .total-table tr:last-child td {
+        padding: 12px 0px 36px 0px;
+      }
+      .total-table tr:first-child td {
+        padding: 22px 0px;
+      }
+
+      .delivery-table tr td,
+      .payment-table tr td {
+        vertical-align: top;
+      }
+      .payment-charge {
+        display: inline-block;
+        transform: translateY(-5px);
+      }
+
       /* Small Devices, Tablets */
       @media only screen and (max-width: 768px) {
         .container {
@@ -205,7 +210,7 @@
           class="center"
         />
       </div>
-      <div class="title">
+      <div class="title mt-4">
         <div class="txt-primary txt-36 center we-500 line-44">
           Order was cancelled
         </div>
@@ -218,109 +223,151 @@
           receive order approval requests from someone within your organisation.
         </div>
       </div>
-      <div class="order-item mt-4">
-        <div class="item b-top flex space-between py-5">
-          <div class="over-hidden w-69 h-69 round-1 mr-4 5">
-            <img
-              src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/f7ea9303-2915-0433-8b2b-f1682d814dc9.png"
-              alt="item"
-              class="avatar"
-            />
-          </div>
-          <div class="grow-1">
-            <div class="txt-primary txt-16 line-20 we-500">
-              Caramel Cold Brew Latte
-            </div>
-            <div class="txt-sec mt-1 txt-14 line-28 we-400">2x</div>
-          </div>
-          <div class="txt-primary txt-16 line-20 we-500">RM 24.80</div>
-        </div>
-        <div class="item b-top flex space-between py-5">
-          <div class="w-69 h-69 round-1 mr-4 5">
-            <img
-              src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/f7ea9303-2915-0433-8b2b-f1682d814dc9.png"
-              alt="item"
-              class="avatar"
-            />
-          </div>
-          <div class="grow-1">
-            <div class="txt-primary txt-16 line-20 we-500">
-              Caramel Cold Brew Latte
-            </div>
-            <div class="txt-sec mt-1 txt-14 line-28 we-400">2x</div>
-          </div>
-          <div class="txt-primary txt-16 line-20 we-500">RM 24.80</div>
-        </div>
+      <div class="order-item order-table mt-4">
+        <table>
+          <tr>
+            <td>
+              <div class="over-hidden w-69 h-69 round-1 mr-4 5">
+                <img
+                  src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/f7ea9303-2915-0433-8b2b-f1682d814dc9.png"
+                  alt="item"
+                  class="avatar"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="txt-primary txt-16 line-20 we-500">
+                Caramel Cold Brew Latte
+              </div>
+              <div class="txt-sec mt-1 txt-14 line-28 we-400">2x</div>
+            </td>
+            <td class="text-right">
+              <div class="txt-primary txt-16 line-20 we-500">RM 24.80</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="over-hidden w-69 h-69 round-1 mr-4 5">
+                <img
+                  src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/f7ea9303-2915-0433-8b2b-f1682d814dc9.png"
+                  alt="item"
+                  class="avatar"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="txt-primary txt-16 line-20 we-500">
+                Caramel Cold Brew Latte
+              </div>
+              <div class="txt-sec mt-1 txt-14 line-28 we-400">2x</div>
+            </td>
+            <td class="text-right">
+              <div class="txt-primary txt-16 line-20 we-500">RM 24.80</div>
+            </td>
+          </tr>
+        </table>
       </div>
-      <div class="flex b-top space-between py-22px">
-        <div class="txt-sec mt-1 txt-14 line-28 we-400">Subtotal</div>
-        <div class="txt-primary txt-14 line-20 we-400">RM 42.60</div>
+      <div class="total-table">
+        <table>
+          <tr>
+            <td>
+              <div class="txt-sec mt-1 txt-14 line-28 we-400">Subtotal</div>
+            </td>
+            <td class="text-right">
+              <div class="txt-primary txt-14 line-20 we-400">RM 42.60</div>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="txt-sec mt-1 txt-14 line-28 we-400">Total</div></td>
+            <td class="text-right">
+              <div class="txt-primary txt-28 line-36 we-500">RM 42.60</div>
+            </td>
+          </tr>
+        </table>
       </div>
-      <div class="flex b-top space-between pt-3 pb-9">
-        <div class="txt-sec mt-1 txt-14 line-28 we-400">Total</div>
-        <div class="txt-primary txt-28 line-36 we-500">RM 42.60</div>
-      </div>
+
       <div class="payment b-top">
         <div class="txt-20 txt-primary line-28 we-500 mt-4">
           Payment details
         </div>
-        <div class="flex wrap">
-          <div class="w-50 pr-4 pt-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1">Payment method</div>
-            <div class="flex">
-              <div class="icon b-width-1 b-solid b-secondary round-1 fuel-icon">
-                <img
-                  src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/ee691522-8932-ab9c-5fb8-e1ae981824bf.png"
-                  alt="icon-petronas"
-                />
-              </div>
-              <div class="txt-primary txt-14 line-16 we-400">
-                Company back charge
-              </div>
-            </div>
-          </div>
-          <div class="w-50 pr-4 pt-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">Email</div>
-            <div class="txt-primary txt-14 line-16 we-400">
-              syafiq@petronas.com
-            </div>
-          </div>
-          <div class="w-50 pr-4 pt-4 pb-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">GL number</div>
-            <div class="txt-primary txt-14 line-16 we-400">71310100</div>
-          </div>
-          <div class="w-50 pr-4 pt-4 pb-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
-              Cost centre number
-            </div>
-            <div class="txt-primary txt-14 line-16 we-400">499OER-100</div>
-          </div>
+        <div class="payment-table">
+          <table>
+            <tr>
+              <td class="w-50 pr-4 pt-4">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1">
+                  Payment method
+                </div>
+                <div>
+                  <div
+                    class="icon b-width-1 b-solid b-secondary round-1 fuel-icon"
+                  >
+                    <img
+                      src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/ee691522-8932-ab9c-5fb8-e1ae981824bf.png"
+                      alt="icon-petronas"
+                    />
+                  </div>
+                  <span
+                    class="txt-primary txt-14 line-16 we-400 payment-charge"
+                  >
+                    Company back charge
+                  </span>
+                </div>
+              </td>
+              <td class="w-50 pr-4 pt-4">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">Email</div>
+                <div class="txt-primary txt-14 line-16 we-400">
+                  syafiq@petronas.com
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="pr-4 pt-4 pb-5">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
+                  GL number
+                </div>
+                <div class="txt-primary txt-14 line-16 we-400">71310100</div>
+              </td>
+              <td class="pr-4 pt-4 pb-5">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
+                  Cost centre number
+                </div>
+                <div class="txt-primary txt-14 line-16 we-400">499OER-100</div>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
       <div class="delivery b-top">
         <div class="txt-20 txt-primary line-28 we-500 mt-4">
           Delivery details
         </div>
-        <div class="flex wrap">
-          <div class="w-50 pr-4 pt-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">Address</div>
-            <div class="txt-primary txt-14 line-16 we-400">
-              PETRONAS Twin Towers Level 33, Tower 1, Commercial Business
-            </div>
-          </div>
-          <div class="w-50 pr-4 pt-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
-              Delivery time
-            </div>
-            <div class="txt-primary txt-14 line-16 we-400">30-45 mins</div>
-          </div>
-          <div class="w-50 pr-4 pt-4 pb-4">
-            <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
-              Delivery instruction
-            </div>
-            <div class="txt-primary txt-14 line-16 we-400">Deliver by 1pm</div>
-          </div>
-        </div>
+        <table class="delivery-table">
+          <tr class="w-50 pr-4 pt-4">
+            <td class="w-50 pr-4 pt-4">
+              <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">Address</div>
+              <div class="txt-primary txt-14 line-16 we-400">
+                PETRONAS Twin Towers Level 33, Tower 1, Commercial Business
+              </div>
+            </td>
+            <td class="w-50 pr-4 pt-4">
+              <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
+                Delivery time
+              </div>
+              <div class="txt-primary txt-14 line-16 we-400">30-45 mins</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-50 pr-4 pt-4 pb-5">
+              <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1">
+                Delivery instruction
+              </div>
+              <div class="txt-primary txt-14 line-16 we-400">
+                Deliver by 1pm
+              </div>
+            </td>
+            <td class="w-50 pr-4 pt-4 pb-5"></td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>
