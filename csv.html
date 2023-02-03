@@ -1,213 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template Email</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-    </style>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-      }
-      .container {
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Template Email</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+        </style>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Inter", sans-serif;
+            }
+            .container {
+                padding-top: 48px;
+                padding-bottom: 53px;
+            }
+            .center {
+                margin: auto;
+                text-align: center;
+                display: block;
+            }
+            .bg-blue {
+                background-color: #e7f3fb;
+                width: 100%;
+                height: auto;
+            }
+            .block {
+                background-color: #ffff;
+                text-align: center;
+                max-width: 600px;
+                margin: auto;
+                height: 422px;
+                margin: 0 auto;
+                border-radius: 8px;
+            }
 
-          padding-top: 48px;
-          padding-bottom: 53px;
-        }
-      .center {
-        margin: auto;
-        text-align: center;
-        display: block;
-      }
-      .bg-blue{
-        background-color: #e7f3fb;
-        width: 100%;
-        height: auto;
-      }
-     .block{
-      background-color: #ffff;
-      text-align: center;
-      max-width: 600px;
-        margin: auto;
-      height: 422px;
-      margin: 0 auto;
-    }
-      
-      .font-bold{
-        font-weight: bold;
-      }
-      .text-bland{
-        color: #525B65;
-      }
-      .font-white{
-        color: #ffff;
-      }
-      .text-16{
-        font-size: 16px;
-      }
-      .text-14{
-        font-size: 14px;
-      }
-      .text-20{
-        font-size: 20px;
-      }
-      .text-12{
-        font-size: 12px;
-      }
-      .we-400 {
-        font-weight: 400;
-      }
-      .we-500 {
-        font-weight: 500;
-      }
-      .we-700 {
-        font-weight: 700;
-      }
-      .line-16 {
-        line-height: 16px;
-      }
-      .line-20 {
-        line-height: 20px;
-      }
-      .line-28 {
-        line-height: 28px;
-      }
-      .line-22 {
-        line-height: 22px;
-      }
-      .line-19 {
-        line-height: 19px;
-      }
-      .btn{
-        padding: 12px 16px;
-        background-color: #00B0FF;
-      }
-      .footer{
-        background-color: #F3F6FA;
-        padding: 24px 80px;
-        text-align: center;
-        width: 100%;
-      height: 68px;
-      margin: 0 auto;
-      }
-      .text-footer{
-        color: #788494;
-      }
-      .text-center{
-        text-align: center;
-      }
-      .text-email{
-        color: #00B0FF;
-      }
-      .width-56{
-        width: 56px;
-      }
-      .display-flex{
-        display: flex;
-      }
-      .mt-1 {
-        margin-top: 4px;
-      }
-      .mt-2 {
-        margin-top: 8px;
-      }
-      .mt-8 {
-        margin-top: 32px;
-      }
-      .mr-4 {
-        margin-right: 16px;
-      }
-      .mt-4 {
-        margin-top: 16px;
-      }
-      .mt-6 {
-        margin-top: 24px;
-      }
-      .mt-9 {
-        margin-top: 36px;
-      }
-      .pb-1 {
-        padding-bottom: 4px;
-      }
-      .pb-2 {
-        padding-bottom: 8px;
-      }
-      .pt-4 {
-        padding-top: 16px;
-      }
-      .pt-11{
-        padding-top: 44px;
-      }
-      .pt-8{
-        padding-top: 32px;
-      }
-      .pt-6{
-        padding-top: 24px;
-      }
-      .border-4{
-        border-radius: 4px;
-      }
-      .border-none{
-        border: none;
-      }
-      .mt-7{
-        margin-top: 28px;
-      }
-      .text-decoration_none{
-        text-decoration: none;
-      }
-      /* Small Devices, Tablets */
-      @media only screen and (max-width: 768px) {
-        .footer{
-        height: 129px;
-        padding: 44px 56px;
-        
-      }
-        .block{
-      width: 100%;
-      height: 482px;
-    }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container bg-blue">
-      <div class="block pt-11">
-        <img
-          src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/6900dcba-9266-f9b4-7cd3-abec5cf8bcf1.png"
-          alt="Setel icon"
-          class="center"
-        />
-        <div class="text-20 .we-500 line-28 mt-8">Food delivery report</div>
-        <div class="text-16 text-bland we-500 line-22 mt-2">01/02/2023</div>
-        <div class="text-14 we-400 line-19 mt-6">Your requested file is now ready to download.</div>
-        <div class="text-14 we-400 line-20  mt-6">food_delivery_report_20230201.csv</div>
-        <button class="font-white btn we-700 line-16 text-12 mt-6 border-4 border-none">
-          <a class="text-decoration_none font-white" target="_blank" href="#" >DOWLOAD REPORT</a>
-        </button>
-        <div class="footer mt-9">
-          <div class="text-12 w-400 line-20 text-footer">This is a system-generated email. Please do not reply directly to this email.</div>
+            .font-bold {
+                font-weight: bold;
+            }
+            .text-bland {
+                color: #525b65;
+            }
+            .font-white {
+                color: #ffff;
+            }
+            .text-16 {
+                font-size: 16px;
+            }
+            .text-14 {
+                font-size: 14px;
+            }
+            .text-20 {
+                font-size: 20px;
+            }
+            .text-12 {
+                font-size: 12px;
+            }
+            .we-400 {
+                font-weight: 400;
+            }
+            .we-500 {
+                font-weight: 500;
+            }
+            .we-700 {
+                font-weight: 700;
+            }
+            .line-16 {
+                line-height: 16px;
+            }
+            .line-20 {
+                line-height: 20px;
+            }
+            .line-28 {
+                line-height: 28px;
+            }
+            .line-22 {
+                line-height: 22px;
+            }
+            .line-23 {
+                line-height: 23px;
+            }
+            .line-19 {
+                line-height: 19px;
+            }
+            .btn {
+                padding: 12px 16px;
+                background-color: #00b0ff;
+                width: 178px;
+                height: 40px;
+            }
+            .footer {
+                background-color: #f3f6fa;
+                padding: 24px 80px;
+                text-align: center;
+                width: 100%;
+                height: 68px;
+                margin: 0 auto;
+                border-radius: 0 0 10px 10px;
+            }
+            .text-footer {
+                color: #788494;
+            }
+            .text-center {
+                text-align: center;
+            }
+            .text-email {
+                color: #00b0ff;
+            }
+            .width-56 {
+                width: 56px;
+            }
+            .display-flex {
+                display: flex;
+            }
+            .mt-1 {
+                margin-top: 4px;
+            }
+            .mt-2 {
+                margin-top: 8px;
+            }
+            .mt-8 {
+                margin-top: 32px;
+            }
+            .mr-4 {
+                margin-right: 16px;
+            }
+            .mt-4 {
+                margin-top: 16px;
+            }
+            .mt-6 {
+                margin-top: 24px;
+            }
+            .mt-9 {
+                margin-top: 36px;
+            }
+            .pb-1 {
+                padding-bottom: 4px;
+            }
+            .pb-2 {
+                padding-bottom: 8px;
+            }
+            .pt-4 {
+                padding-top: 16px;
+            }
+            .pt-11 {
+                padding-top: 44px;
+            }
+            .pt-8 {
+                padding-top: 32px;
+            }
+            .pt-6 {
+                padding-top: 24px;
+            }
+            .border-4 {
+                border-radius: 4px;
+            }
+            .border-8 {
+                border-radius: 8px;
+            }
+            .border-none {
+                border: none;
+            }
+            .mt-7 {
+                margin-top: 28px;
+            }
+            .text-decoration_none {
+                text-decoration: none;
+            }
+            .letter-1 {
+                letter-spacing: 1px;
+            }
+            .vertical-align-top{
+              vertical-align: text-top;
+            }
+            /* Small Devices, Tablets */
+            @media only screen and (max-width: 768px) {
+                .footer {
+                    height: 129px;
+                    padding: 44px 56px;
+                }
+                .block {
+                    width: 100%;
+                    height: 482px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container bg-blue">
+            <div>
+                <div class="block pt-11">
+                    <img
+                        src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/6900dcba-9266-f9b4-7cd3-abec5cf8bcf1.png"
+                        alt="Setel icon"
+                        class="center"
+                    />
+                    <div class="text-20 .we-500 line-28 mt-8">
+                        Food delivery report
+                    </div>
+                    <div class="text-16 text-bland we-500 line-23 mt-2">
+                        01/02/2023
+                    </div>
+                    <div class="text-14 we-400 line-19 mt-6">
+                        Your requested file is now ready to download.
+                    </div>
+                    <div class="text-14 we-400 line-20 mt-6">
+                        food_delivery_report_20230201.csv
+                    </div>
+                    <button
+                        class="font-white btn we-700 line-16 text-12 mt-6 border-4 border-none"
+                    >
+                        <a
+                            class="text-decoration_none font-white letter-1"
+                            target="_blank"
+                            href="#"
+                            >DOWLOAD REPORT</a
+                        >
+                    </button>
+                    <div class="footer mt-9">
+                        <div class="text-12 w-400 line-20 text-footer">
+                            This is a system-generated email. Please do not
+                            reply directly to this email.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-7">
+                    <span class="text-12 line-20 we-400 text-bland"
+                        >Please send any feedback to
+                        <span class="text-email">hello@setel.com</span></span
+                    >
+                </div>
+                <div class="text-center mt-6">
+                    <span class="Powered by text-12 w-400 line-20 vertical-align-top"
+                        >Powered by
+                    </span>
+                    <img
+                        src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/6900dcba-9266-f9b4-7cd3-abec5cf8bcf1.png"
+                        alt="Setel icon"
+                        class="width-56 vertical-align-top"
+                    />
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <div class="text-center mt-7">
-        <span class="text-12 line-20 we-400 text-bland">Please send any feedback to <span class="text-email">hello@setel.com</span></span>
-      </div>
-      <div class="text-center mt-6">
-        <span class="Powered by text-12 w-400 line-20 ">Powered by 
-          <img
-          src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/6900dcba-9266-f9b4-7cd3-abec5cf8bcf1.png"
-          alt="Setel icon"
-          class="width-56"
-        /></span>
-      </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
