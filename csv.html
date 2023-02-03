@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Email</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', sans-serif;
+      }
+      .center {
+        margin: auto;
+        text-align: center;
+        display: block;
+      }
+      .fuel-icon {
+        height: 20px;
+        width: 32px;
+        position: relative;
+        display: inline-block;
+      }
+      .fuel-img {
+        display: inline-block;
+        height: 20px;
+      }
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .txt-primary {
+        color: #2d333a;
+      }
+      .txt-sec {
+        color: #525b65;
+      }
+      .txt-14 {
+        font-size: 14px;
+      }
+      .txt-16 {
+        font-size: 16px;
+      }
+      .txt-18 {
+        font-size: 18px;
+      }
+      .txt-20 {
+        font-size: 20px;
+      }
+      .txt-28 {
+        font-size: 28px;
+      }
+      .txt-36 {
+        font-size: 36px;
+      }
+      .we-400 {
+        font-weight: 400;
+      }
+      .we-500 {
+        font-weight: 500;
+      }
+      .line-16 {
+        line-height: 16px;
+      }
+      .line-20 {
+        line-height: 20px;
+      }
+      .line-28 {
+        line-height: 28px;
+      }
+      .line-36 {
+        line-height: 36px;
+      }
+      .line-44 {
+        line-height: 44px;
+      }
+
+      .mt-1 {
+        margin-top: 4px;
+      }
+      .mr-4 {
+        margin-right: 16px;
+      }
+      .mt-4 {
+        margin-top: 16px;
+      }
+      .mt-6 {
+        margin-top: 24px;
+      }
+      .my-4 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      .pb-1 {
+        padding-bottom: 4px;
+      }
+      .pt-4 {
+        padding-top: 16px;
+      }
+      .pb-5 {
+        padding-bottom: 20px;
+      }
+      .pr-4 {
+        padding-right: 16px;
+      }
+      .w-69 {
+        width: 69px;
+      }
+      .h-69 {
+        height: 69px;
+      }
+      .over-hidden {
+        overflow: hidden;
+      }
+      .round-1 {
+        border-radius: 4px;
+      }
+
+      .b-width-1 {
+        border-width: 1px;
+      }
+      .b-secondary {
+        border-color: #b4c3d3;
+      }
+      .b-solid {
+        border-style: solid;
+      }
+      .b-top {
+        border-top: 1px solid #b4c3d3;
+      }
+      .w-50 {
+        width: 50%;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      tr {
+        width: 100%;
+      }
+      .order-table tr,
+      .total-table tr {
+        border-top: 1px solid #b4c3d3;
+      }
+
+      .order-table tr td {
+        padding: 20px 0px;
+        vertical-align: top;
+      }
+      .order-table tr > td:first-child {
+        width: 70px;
+      }
+      .text-right {
+        text-align: right;
+      }
+
+      .total-table tr:last-child td {
+        padding: 12px 0px 36px 0px;
+      }
+      .total-table tr:first-child td {
+        padding: 22px 0px;
+      }
+
+      .delivery-table tr td,
+      .payment-table tr td {
+        vertical-align: top;
+      }
+      .payment-charge {
+        display: inline-block;
+        transform: translateY(-5px);
+      }
+
+      .text-gray {
+        color: #788494;
+      }
+      /* Small Devices, Tablets */
+      @media only screen and (max-width: 768px) {
+        .container {
+          margin: 0px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header mt-6">
+        <img
+          src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/6900dcba-9266-f9b4-7cd3-abec5cf8bcf1.png"
+          alt="Setel icon"
+          class="center"
+        />
+      </div>
+      <div class="icon mt-6">
+        <img
+          src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/ad6b74e6-ea77-0109-0ea6-c25757c8b604.png"
+          alt="avatar"
+          class="center"
+        />
+      </div>
+      <div class="title mt-4">
+        <div class="txt-primary txt-36 center we-500 line-44">Order notice</div>
+        <div class="center txt-18 txt-sec mt-4 line-28 my-4">
+          We have received an order submission from Shafik Ramli.
+        </div>
+        <div class="center txt-14 txt-sec line-20">
+          You are receiving this email because you are the designated person to
+          receive order approval requests from someone within your organisation.
+        </div>
+      </div>
+      <div class="order-item order-table mt-4">
+        <table>
+          <tr>
+            <td>
+              <div class="over-hidden w-69 h-69 round-1 mr-4 5">
+                <img
+                  src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/f7ea9303-2915-0433-8b2b-f1682d814dc9.png"
+                  alt="item"
+                  class="avatar"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="txt-primary txt-16 line-20 we-500">
+                Caramel Cold Brew Latte
+              </div>
+              <div class="txt-sec mt-1 txt-14 line-28 we-400 text-gray">2x</div>
+            </td>
+            <td class="text-right">
+              <div class="txt-primary txt-16 line-20 we-500">RM 24.80</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="over-hidden w-69 h-69 round-1 mr-4 5">
+                <img
+                  src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/f7ea9303-2915-0433-8b2b-f1682d814dc9.png"
+                  alt="item"
+                  class="avatar"
+                />
+              </div>
+            </td>
+            <td>
+              <div class="txt-primary txt-16 line-20 we-500">
+                Caramel Cold Brew Latte
+              </div>
+              <div class="txt-sec mt-1 txt-14 line-28 we-400 text-gray">2x</div>
+            </td>
+            <td class="text-right">
+              <div class="txt-primary txt-16 line-20 we-500">RM 24.80</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="total-table">
+        <table>
+          <tr>
+            <td>
+              <div class="txt-sec mt-1 txt-14 line-28 we-400 text-gray">Subtotal</div>
+            </td>
+            <td class="text-right">
+              <div class="txt-primary txt-14 line-20 we-400">RM 42.60</div>
+            </td>
+          </tr>
+          <tr>
+            <td><div class="txt-sec mt-1 txt-14 line-28 we-400 text-gray">Total</div></td>
+            <td class="text-right">
+              <div class="txt-primary txt-28 line-36 we-500">RM 42.60</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="payment b-top">
+        <div class="txt-20 txt-primary line-28 we-500 mt-4">
+          Payment details
+        </div>
+        <div class="payment-table">
+          <table>
+            <tr>
+              <td class="w-50 pr-4 pt-4">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 text-gray">
+                  Payment method
+                </div>
+                <div>
+                  <div
+                    class="icon b-width-1 b-solid b-secondary round-1 fuel-icon"
+                  >
+                    <img
+                      src="https://mcusercontent.com/1da7f1d039f89003b494213fe/images/ee691522-8932-ab9c-5fb8-e1ae981824bf.png"
+                      alt="icon-petronas"
+                      class="fuel-img"
+                    />
+                  </div>
+                  <span
+                    class="txt-primary txt-14 line-16 we-400 payment-charge"
+                  >
+                    Company back charge
+                  </span>
+                </div>
+              </td>
+              <td class="w-50 pr-4 pt-4">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1 text-gray">Email</div>
+                <div class="txt-primary txt-14 line-16 we-400">
+                  syafiq@petronas.com
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="pr-4 pt-4 pb-5">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1 text-gray">
+                  GL number
+                </div>
+                <div class="txt-primary txt-14 line-16 we-400">71310100</div>
+              </td>
+              <td class="pr-4 pt-4 pb-5">
+                <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1 text-gray">
+                  Cost centre number
+                </div>
+                <div class="txt-primary txt-14 line-16 we-400">499OER-100</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="delivery b-top">
+        <div class="txt-20 txt-primary line-28 we-500 mt-4">
+          Delivery details
+        </div>
+        <table class="delivery-table">
+          <tr class="w-50 pr-4 pt-4">
+            <td class="w-50 pr-4 pt-4">
+              <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1 text-gray">Address</div>
+              <div class="txt-primary txt-14 line-16 we-400">
+                PETRONAS Twin Towers Level 33, Tower 1, Commercial Business
+              </div>
+            </td>
+            <td class="w-50 pr-4 pt-4">
+              <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1 text-gray">
+                Delivery time
+              </div>
+              <div class="txt-primary txt-14 line-16 we-400">30-45 mins</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="w-50 pr-4 pt-4 pb-5">
+              <div class="txt-sec txt-14 line-16 we-400 pb-1 pb-1 text-gray">
+                Delivery instruction
+              </div>
+              <div class="txt-primary txt-14 line-16 we-400">
+                Deliver by 1pm
+              </div>
+            </td>
+            <td class="w-50 pr-4 pt-4 pb-5"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
